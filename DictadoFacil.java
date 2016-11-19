@@ -1,12 +1,17 @@
 import java.util.ArrayList;
 
+//clase que contiene dos atributos las notas posibles del dictado facil
+//un array de notas que contiene las notas posibles
 public class DictadoFacil {
 	
+	//
 	Nota b4,c5,d5,e5,f5,g5,a5,b5,c6,d6,e6,f6,g6;
 	Nota[] notasPosibles;
 	public DictadoFacil()
 	{
+		//inicialicamos el array
 		notasPosibles= new Nota[13];
+		//al array de notas le agregamos la nota inicializada con el nombre del nota
 		notasPosibles[0]=b4=new Nota("b4");
 		notasPosibles[1]=c5=new Nota("c5");
 		notasPosibles[2]=d5= new Nota("d5");
@@ -27,8 +32,8 @@ public class DictadoFacil {
 	
 	public ArrayList<String> generaDictado(int numNotas)
 	{
-		ArrayList<Nota> dictado= new ArrayList<Nota>();
-		ArrayList<String> dictadoNotaAString= new ArrayList<String>();
+		
+		//llamamos el metodo notasPosibles de la nota y le agregamos las notas posibles
 		b4.notasPosibles(c5);
 		c5.notasPosibles(b4,d5);
 		d5.notasPosibles(c5,e5);
@@ -44,14 +49,10 @@ public class DictadoFacil {
 		g6.notasPosibles(f6);
 		
 		
-		
-		return(dictadoNotaAString);
+		//por ahora no regresemas ningun dictado
+		return(null);
 	}
 	
-	public Nota generaNotaInicial()
-	{
-		int aux=(int)Math.random()*12;
-		return(notasPosibles[aux]);
-	}
+	
 
 }
