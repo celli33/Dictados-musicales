@@ -43,13 +43,7 @@ public class DictadoFacil {
 		f6.notasPosibles(e6,g6);
 		g6.notasPosibles(f6);
 		
-		/*dictado.add(this.generaNotaInicial());
-		dictadoNotaAString.add( dictado.get(0).getName() );
-		for(int i=1;i<numNotas;i++)
-		{
-			dictado.add( dictado.get(i).eligeNotaSiguiente() );
-			dictadoNotaAString.add(dictado.get(i).getName());
-		}*/
+		
 		
 		return(dictadoNotaAString);
 	}
